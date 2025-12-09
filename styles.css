@@ -1,0 +1,98 @@
+/* base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  transition: background 0.8s ease;
+}
+
+/* card */
+.card {
+  background-color: rgba(255,255,255,0.95);
+  padding: 20px;
+  margin: auto;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* inputs / botones */
+input.input-field {
+  padding: 8px 12px;
+  margin: 8px 4px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px 16px;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.play-button { background:#0b8043; color:white; }
+.action-button { background:#0b63d6; color:white; }
+.secondary-button { background:#eee; color:#222; }
+
+/* opciones */
+.option-btn { padding:10px 14px; border-radius:8px; margin:6px; }
+.option-btn.selected { outline: 3px solid rgba(0,0,0,0.12); }
+
+/* aciertos / errores */
+.correct { background: #0f9d58 !important; color:#fff; animation: bounce 0.45s; }
+.wrong { background: #d93025 !important; color:#fff; animation: shake 0.45s; }
+
+/* progress & timer */
+.progress-bar { width:100%; height:10px; background:#ddd; border-radius:8px; overflow:hidden; margin-bottom:8px; }
+#progressFill { height:100%; width:0%; background: rgba(0,0,0,0.12); transition:width 0.35s ease; }
+.timer { font-weight:700; margin-bottom:8px; }
+
+/* Animaciones personalizadas (tus claves, intensas) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+.animate-bounce { animation: bounce 1s infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+/* Fondos dinámicos según dificultad (intensos) */
+body.easy {
+  background: linear-gradient(135deg, #007bff 0%, #00b894 100%);
+  background-size: 200% 200%;
+  animation: bgEasy 6s ease infinite;
+}
+@keyframes bgEasy { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+
+body.medium {
+  background: linear-gradient(135deg, #FFD600 0%, #FF6A00 100%);
+  background-size: 200% 200%;
+  animation: bgMed 6s ease infinite;
+}
+@keyframes bgMed { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+
+body.hard {
+  background: linear-gradient(135deg, #8A2BE2 0%, #FF69B4 100%);
+  background-size: 200% 200%;
+  animation: bgHard 6s ease infinite;
+}
+@keyframes bgHard { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+
+/* Colores de botones por dificultad (opcional) */
+body.easy .action-button { background:#005ce6; }
+body.medium .action-button { background:#e65c00; color:#fff; }
+body.hard .action-button { background:#6a0dad; color:#fff; }

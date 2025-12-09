@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juego de Gramática - Música</title>
+
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- Tu CSS (o usa el CSS que incluyo abajo) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app"></div>
+
+  <!-- Sonidos (puedes reemplazar por tus archivos locales si prefieres) -->
+  <audio id="sound-correct" src="https://cdn.jsdelivr.net/gh/zenoasis/sfx/correct.mp3"></audio>
+  <audio id="sound-wrong" src="https://cdn.jsdelivr.net/gh/zenoasis/sfx/wrong.mp3"></audio>
+
+  <!-- Player oculto para audio-only -->
+  <div id="youtubePlayer" style="width:0;height:0;overflow:hidden;position:absolute;left:-9999px"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
